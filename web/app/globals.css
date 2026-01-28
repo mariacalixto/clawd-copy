@@ -123,3 +123,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* Animação de cintilação */
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(0.9); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.1); 
+  }
+}
+
+/* animação de pulso para brilhos */
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.1; 
+    transform: scale(0.8); 
+  }
+  50% { 
+    opacity: 0.4; 
+    transform: scale(1.2); 
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 4s ease-in-out infinite;
+}

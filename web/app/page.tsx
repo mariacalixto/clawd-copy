@@ -1,37 +1,38 @@
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-
+// app/page.tsx
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background px-8">
-      {/* HEADER */}
-      <header className="flex items-center justify-between py-6">
-        <span className="font-semibold">clawd</span>
-        <Button variant="outline">Get started</Button>
-      </header>
-
-      {/* HERO */}
-      <section className="flex flex-col items-center gap-6 py-24 text-center">
-        <Badge>AI powered</Badge>
-
-        <h1 className="text-5xl font-bold">
-          Automate workflows with AI agents
+    <div className="min-h-screen flex flex-col items-center justify-center p-8">
+      <div className="text-center space-y-6 max-w-4xl">
+        <h1 className="text-5xl md:text-7xl font-bold text-white">
+          The AI that <span className="text-purple-300">actually does things</span>
         </h1>
-
-        <Button size="lg">Start now</Button>
-      </section>
-
-      {/* FEATURES */}
-      <section className="grid gap-6 md:grid-cols-3">
-        {["Fast", "Secure", "Scalable"].map((item) => (
-          <Card key={item}>
-            <CardContent className="p-6">
-              {item}
-            </CardContent>
-          </Card>
-        ))}
-      </section>
-    </main>
+        
+        <p className="text-xl text-gray-300">
+          Clears your inbox, sends emails, manages your calendar, checks you in for flights.
+        </p>
+        
+        <p className="text-lg text-gray-400">
+          All from WhatsApp, Telegram, or any chat app you already use.
+        </p>
+        
+        {/* Botão estilo Moltbot */}
+        <div className="pt-8">
+          <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-500 
+                           text-white font-semibold rounded-lg hover:opacity-90 
+                           transition-all duration-200">
+            Get Started
+          </button>
+        </div>
+        
+        {/* Card exemplo */}
+        <div className="mt-12 max-w-2xl mx-auto p-6 bg-black/30 backdrop-blur-sm 
+                       border border-white/10 rounded-xl">
+          <p className="text-gray-300 italic">
+            "Setup @moltbot yesterday. All I have to say is, wow..."
+          </p>
+          <p className="text-gray-400 mt-2">— @jonahships_</p>
+        </div>
+      </div>
+    </div>
   );
 }
