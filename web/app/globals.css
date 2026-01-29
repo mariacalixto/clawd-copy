@@ -1,3 +1,12 @@
+/* ===============================
+   Font: Satoshi (uso sob demanda)
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap');
+
+
+
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -46,6 +55,9 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+/* ===============================
+   Light theme
+================================ */
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -79,8 +91,14 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --text-primary: #ffffff; /* ou sua cor primária */
+  --coral-bright: #ff4d4d;
+  --cyan-bright: #00ffff; /* ajuste conforme necessário */
 }
 
+/* ===============================
+   Dark theme
+================================ */
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
@@ -115,6 +133,9 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* ===============================
+   Base styles
+================================ */
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -124,28 +145,80 @@
   }
 }
 
+/* ===============================
+   Utilities
+================================ */
+@layer utilities {
+  .bbh-hegarty-regular {
+  font-family: "BBH Hegarty", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-/* Animação de cintilação */
-@keyframes twinkle {
-  0%, 100% { 
-    opacity: 0.3; 
-    transform: scale(0.9); 
+}
+
+@layer components {
+  .gradient-text {
+    background: linear-gradient(135deg, 
+      var(--text-primary) 0%, 
+      var(--coral-bright) 50%, 
+      var(--cyan-bright) 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 1s ease infinite;
   }
-  50% { 
-    opacity: 1; 
-    transform: scale(1.1); 
+  
+  .gradient-text-static {
+    background: linear-gradient(135deg, 
+      var(--text-primary) 0%, 
+      var(--coral-bright) 50%, 
+      var(--cyan-bright) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 
-/* animação de pulso para brilhos */
-@keyframes pulse {
-  0%, 100% { 
-    opacity: 0.1; 
-    transform: scale(0.8); 
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
   }
-  50% { 
-    opacity: 0.4; 
-    transform: scale(1.2); 
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+ 
+
+/* ===============================
+   Animations
+================================ */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
   }
 }
 
