@@ -2,6 +2,9 @@
 import Lottie from "lottie-react";
 import Owl from "@/assets/lottie/Owl.json";
 import { ArrowRight, ChevronRight } from "lucide-react";
+import { Marquee } from "./components/marquee";
+import { TestimonialCard, testimonials } from "./components/testimonial-card";
+
 // app/page.tsx
 
 export default function Home() {
@@ -39,6 +42,22 @@ export default function Home() {
     </div>
     
 </div>
+
+ <div className="mt-6 relative overflow-hidden">
+  {/* Fade na esquerda - use from-background ou from-gray-950 */}
+  <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+  
+  {/* Fade na direita */}
+  <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+  
+  <Marquee className="[--duration:40s]" pauseOnHover>
+    {testimonials.map((testimonial, index) => (
+      <TestimonialCard key={index} {...testimonial} />
+    ))}
+  </Marquee>
+</div>
+
+
       </div>
     </div>
   );
