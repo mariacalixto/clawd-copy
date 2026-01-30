@@ -3,6 +3,7 @@
 ================================ */
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=Unbounded:wght@200..900&display=swap');
 
 
 
@@ -93,7 +94,7 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
   --text-primary: #ffffff; /* ou sua cor primária */
   --coral-bright: #ff4d4d;
-  --cyan-bright: #00ffff; /* ajuste conforme necessário */
+  --cyan-mid: #14b8a6; /* ajuste conforme necessário */
 }
 
 /* ===============================
@@ -154,7 +155,14 @@
   font-weight: 400;
   font-style: normal;
 }
+}
 
+@layer utilities {
+  .special-gothic-expanded-one-regular {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 }
 
 @layer components {
@@ -162,12 +170,12 @@
     background: linear-gradient(135deg, 
       var(--text-primary) 0%, 
       var(--coral-bright) 50%, 
-      var(--cyan-bright) 100%);
+      var(--cyan-mid) 100%);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: gradient-shift 1s ease infinite;
+    animation: gradient-shift 5s ease infinite;
   }
   
   .gradient-text-static {
