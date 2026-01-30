@@ -26,7 +26,7 @@ export default function RootLayout({
         <ParticlesBackground />
         
         {/* Camada 3: Conteúdo */}
-        <div className="relative z-10 min-h-screen">
+        <div className="relative z-10 ">
           {children}
         </div>
       </body>

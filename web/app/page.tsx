@@ -1,12 +1,16 @@
+"use client"
+import Lottie from "lottie-react";
+import Owl from "@/assets/lottie/Owl.json";
 // app/page.tsx
+
 export default function Home() {
   return (
-    <div className="relative z-10 max-w-[860px] mx-auto min-h-screen flex flex-col 
-                pt-[200px] pb-[40px] px-6">
-      <div className="text-center space-y-6 max-w-4xl mt-12"> {/* Adicionado mt-12 */}
-        
+    <div className="relative z-10 max-w-[860px] mx-auto flex flex-col">
+       <Lottie className="w-64 h-55 mx-auto" animationData={Owl}/>
+      <div className="text-center space-y-6">
+
         {/* Versão animada */}
-        <h1 className="bbh-hegarty-regular tracking-tight text-6xl gradient-text pt-[20px]">
+        <h1 className="bbh-hegarty-regular tracking-tight text-6xl gradient-text">
           Moltbot
         </h1>
         
@@ -18,10 +22,12 @@ export default function Home() {
           Clears your inbox, sends emails, manages your calendar, checks you in for flights.<br/>
           All from WhatsApp, Telegram, or any chat app you already use.
         </p>
-
-        <h1 className="text-left special-gothic-expanded-one-regular text-xl">
+<div className="mt-12 flex flex-row justify-between items-center px-4">
+    <h1 className="text-left special-gothic-expanded-one-regular text-xl">
           ⟩ What People Say
         </h1>
+        <h2 className="font-light mr-2">View all</h2>
+</div>
       </div>
     </div>
   );
