@@ -1,7 +1,7 @@
 "use client"
 import Lottie from "lottie-react";
 import Owl from "@/assets/lottie/Owl.json";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 // app/page.tsx
 
 export default function Home() {
@@ -23,12 +23,21 @@ export default function Home() {
           Clears your inbox, sends emails, manages your calendar, checks you in for flights.<br/>
           All from WhatsApp, Telegram, or any chat app you already use.
         </p>
-<div className="mt-12 flex flex-row justify-between items-center px-4">
-    <h1 className="text-left special-gothic-expanded-one-regular text-xl">
-          ⟩ What People Say
-        </h1> 
-        <div className="flex"><h2 className="font-normal mr-2 text-[#f51313]">View all</h2><ArrowRight className="text-[#f51313]" strokeWidth={1.5} /></div>
         
+<div className="mt-12 flex flex-row justify-between items-center px-4">
+    <div className="flex items-center ">
+  <ChevronRight className="text-[#f51313]" size={36} strokeWidth={1.75} />
+  <h1 className="special-gothic-expanded-one-regular text-xl">
+    What People Say
+  </h1>
+</div>
+    <div className="group flex items-center gap-1 cursor-pointer">
+        <h2 className="font-normal text-[#f51313] group-hover:text-[#14b8a6] transition-colors duration-300">
+            View all
+        </h2>
+        <ArrowRight className="text-[#f51313] group-hover:text-[#14b8a6] transition-colors duration-300" strokeWidth={1.5} />
+    </div>
+    
 </div>
       </div>
     </div>
