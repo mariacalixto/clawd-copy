@@ -3,7 +3,7 @@ import Lottie from "lottie-react";
 import Owl from "@/assets/lottie/Owl.json";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Marquee } from "./components/marquee";
-import { TestimonialCard, testimonials } from "./components/testimonial-card";
+
 
 // app/page.tsx
 
@@ -15,7 +15,7 @@ export default function Home() {
 
         
         <h1 className="bbh-hegarty-regular tracking-tight text-6xl gradient-text">
-          Moltbot
+          OpenClaw
         </h1>
         
         <p className="font-medium tracking-widest text-xl scale-y-80 tracking-[0.2em] text-[#ff4d4d]">
@@ -43,18 +43,92 @@ export default function Home() {
     
 </div>
 
- <div className="mt-6 relative overflow-hidden">
-  {/* Fade na esquerda - use from-background ou from-gray-950 */}
-  <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+<div className="relative w-full overflow-hidden">
+  {/* Gradientes nas bordas */}
+  <div className="absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+  <div className="absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
   
-  {/* Fade na direita */}
-  <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-  
-  <Marquee className="[--duration:40s]" pauseOnHover>
-    {testimonials.map((testimonial, index) => (
-      <TestimonialCard key={index} {...testimonial} />
-    ))}
-  </Marquee>
+  {/* Primeira linha - Move para ESQUERDA */}
+  <div className="flex overflow-hidden">
+    <div className="flex flex-none py-6 animate-marquee gap-4">
+      {/* Card 1 */}
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Descrição ou texto que você quiser escrever aqui dentro.</p>
+      </div>
+      
+      {/* Card 2 */}
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Alta performance e velocidade máxima.</p>
+      </div>
+      
+      {/* Card 3 */}
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Proteção total dos seus dados.</p>
+      </div>
+      
+      {/* Card 4 */}
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Conecta com todas as ferramentas.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+        <p className="text-gray-400 text-sm">Descrição ou texto que você quiser escrever aqui dentro.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Alta performance e velocidade máxima.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Proteção total dos seus dados.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Conecta com todas as ferramentas.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Segunda linha - Move para DIREITA (invertida) */}
+  <div className="flex overflow-hidden">
+    <div className="flex flex-none py-1 animate-marquee-reverse gap-4">
+      {/* Cards na ordem invertida */}
+        <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Descrição ou texto que você quiser escrever aqui dentro.</p>
+      </div>
+      
+      {/* Card 2 */}
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Alta performance e velocidade máxima.</p>
+      </div>
+      
+      {/* Card 3 */}
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Proteção total dos seus dados.</p>
+      </div>
+      
+      {/* Card 4 */}
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Conecta com todas as ferramentas.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+        <p className="text-gray-400 text-sm">Descrição ou texto que você quiser escrever aqui dentro.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Alta performance e velocidade máxima.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Proteção total dos seus dados.</p>
+      </div>
+      
+      <div className="flex-none w-90 h-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all hover:scale-105">
+        <p className="text-gray-400 text-sm">Conecta com todas as ferramentas.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
