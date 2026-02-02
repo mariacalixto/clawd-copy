@@ -3,7 +3,8 @@ import Lottie from "lottie-react";
 import Owl from "@/assets/lottie/Owl.json";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Marquee from "./components/marquee"
-
+import Snippet from "./components/snippet"
+import Wid from "./components/wid"
 
 // app/page.tsx
 
@@ -54,6 +55,39 @@ export default function Home() {
   <ChevronRight className="text-[#ff4d4d]" size={36} strokeWidth={1.75} />
   <h1 className="special-gothic-expanded-one-regular text-xl">
     Quick Start
+  </h1>
+</div>
+</div>
+
+
+    <div>
+      <Snippet />
+    </div>
+    
+        <p className="text-sm text-base font-extralight leading-loose text-[#8892b0]">
+          Works on macOS, Windows & Linux. The one-liner installs Node.js and everything else for you.
+        </p>
+
+         <div className="mt-12 flex flex-row justify-between items-center px-4">
+    <div className="flex items-center ">
+  <ChevronRight className="text-[#ff4d4d]" size={36} strokeWidth={1.75} />
+  <h1 className="special-gothic-expanded-one-regular text-xl">
+    What It Does
+  </h1>
+</div>
+</div>
+
+<main className="px-6">
+  <div className="max-w-7xl mx-auto">
+    <Wid />
+  </div>
+</main>
+
+         <div className="mt-12 flex flex-row justify-between items-center px-4">
+    <div className="flex items-center ">
+  <ChevronRight className="text-[#ff4d4d]" size={36} strokeWidth={1.75} />
+  <h1 className="special-gothic-expanded-one-regular text-xl">
+    Works With Everything
   </h1>
 </div>
 </div>
