@@ -62,22 +62,36 @@ function Feature({
   desc: string
 }) {
   return (
-    <div className="group relative rounded-2xl border border-white/10 bg-white/2 backdrop-blur-sm p-4 transition-all duration-300 hover:scale-105 hover:border-2 hover:border-[#ff4d4d] hover:shadow-[0_0_25px_rgba(245,19,19,0.45)]">
-      
+    <div
+      className="
+        group
+        relative
+        rounded-2xl
+        border-1 border-white/10
+        bg-white/2 backdrop-blur-sm
+        p-4
+        transition-all duration-300
+        hover:border-[#ff4d4d]
+        hover:shadow-[0_0_25px_rgba(245,19,19,0.45)]
+        hover:scale-[1.03]
+        will-change-transform
+      "
+    >
       {/* Icon */}
       <div className="mb-4 h-10 flex items-center justify-center text-[#ff4d4d]">
         {icon}
       </div>
 
       {/* Title */}
-      <h3 className="text-white text-sm text-left special-gothic-expanded-one-regular font-medium mb-2">
+      <h3 className="text-white text-sm special-gothic-expanded-one-regular font-medium mb-2">
         {title}
       </h3>
 
       {/* Description */}
-      <p className=" text-left text-sm font-extralight text-gray-400 leading-relaxed">
+      <p className="text-sm font-extralight text-gray-400 leading-relaxed">
         {desc}
       </p>
     </div>
   )
 }
+
