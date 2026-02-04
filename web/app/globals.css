@@ -239,7 +239,7 @@
 }
 
 
-/* ===== MARQUEE INFINITO (SEM BURACO) ===== */
+/* ===== MARQUEE INFINITO ===== */
 
 @keyframes marquee {
   0% {
@@ -271,6 +271,19 @@
 .animate-marquee:hover,
 .animate-marquee-reverse:hover {
   animation-play-state: paused;
+}
+
+
+
+/* cor de seleção/copiar */
+::selection {
+  background-color: #ff4d4d;
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: #ff4d4d;
+  color: #000000;
 }
 
 
